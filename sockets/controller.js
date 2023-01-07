@@ -1,3 +1,7 @@
+const TicketControl = require('../models/ticket-control.model');
+
+
+const ticketControl = new TicketControl();
 
 const socketController = (socket) => {
     
