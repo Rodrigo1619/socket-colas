@@ -4,7 +4,7 @@ const fs = require('fs');
 class Ticket {
     constructor(numero, escritorio){
         this.numero = numero;
-        this.escritorio = escritorio
+        this.escritorio = escritorio;
     }
 }
 
@@ -50,7 +50,7 @@ class TicketControl{
         return 'Ticket ' + ticket.numero;
     }
 
-    atenderTicket(){
+    atenderTicket(escritorio){ //atendemos el ticket con el escritorio
         //Si no tenemos tickets 
         if(this.tickets.length === 0){
             return null
