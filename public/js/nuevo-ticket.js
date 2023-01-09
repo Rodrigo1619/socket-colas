@@ -5,8 +5,6 @@ const btnCrear = document.querySelector('button');
 
 const socket = io();
 
-
-
 socket.on('connect', () => {
     btnCrear.disabled = false //estara habilitado si el servidor esta arriba
 
