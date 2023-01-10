@@ -11,6 +11,12 @@ const lblEscritorio4   = document.querySelector('#lblEscritorio4');
 const socket = io();
 
 socket.on('estado-actual', (payload)=>{
+
+    //reproducir el audio al momento de asignar un nuevo ticket
+    const audio = new Audio('./audio/new-ticket.mp3');
+    audio.play();
+
+    //mostrar los ultimos 4 tickets en la pantalla de publico
     const [ticket1, ticket2, ticket3, ticket4] = payload;
 
     if(ticket1){
